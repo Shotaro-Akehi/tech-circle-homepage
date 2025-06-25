@@ -33,19 +33,19 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      title: "Email",
+      title: "メール",
       details: "info@techcircle.dev",
       link: "mailto:info@techcircle.dev"
     },
     {
       icon: MapPin,
-      title: "Location",
+      title: "所在地",
       details: "東京都渋谷区",
       link: null
     },
     {
       icon: Phone,
-      title: "Phone",
+      title: "電話番号",
       details: "+81 (0) 3-XXXX-XXXX",
       link: "tel:+81-3-XXXX-XXXX"
     }
@@ -74,7 +74,7 @@ const Contact = () => {
       icon: Instagram,
       name: "Instagram",
       url: "https://instagram.com/techcircle",
-      color: "hover:text-pink-400"
+      color: "hover:text-purple-400"
     }
   ];
 
@@ -88,12 +88,12 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Get In Touch
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              お問い合わせ
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            プロジェクトへの参加や技術に関するご質問など、
+            サークルへの参加や活動に関するご質問など、
             お気軽にお声がけください。
           </p>
         </motion.div>
@@ -104,9 +104,9 @@ const Contact = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-purple-500/20"
+            className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-blue-500/20"
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Send us a message</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">メッセージを送る</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -120,7 +120,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-200"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-blue-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-200"
                     placeholder="田中太郎"
                   />
                 </div>
@@ -135,7 +135,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-200"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-blue-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-200"
                     placeholder="tanaka@example.com"
                   />
                 </div>
@@ -151,7 +151,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-blue-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-200"
                   placeholder="プロジェクト参加について"
                 />
               </div>
@@ -166,16 +166,16 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-200 resize-none"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-blue-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-200 resize-none"
                   placeholder="お気軽にメッセージをお送りください..."
                 />
               </div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-purple-500/25"
+                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/25"
               >
                 <Send className="w-5 h-5" />
-                Send Message
+                メッセージを送信
               </button>
             </form>
           </motion.div>
@@ -188,7 +188,7 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">連絡先情報</h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <motion.div
@@ -196,9 +196,9 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                    className="flex items-center gap-4 p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+                    className="flex items-center gap-4 p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
                       <info.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -206,7 +206,7 @@ const Contact = () => {
                       {info.link ? (
                         <a
                           href={info.link}
-                          className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+                          className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                         >
                           {info.details}
                         </a>
@@ -221,7 +221,7 @@ const Contact = () => {
 
             {/* Social Media */}
             <div>
-              <h4 className="text-xl font-bold text-white mb-4">Follow Us</h4>
+              <h4 className="text-xl font-bold text-white mb-4">フォローする</h4>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -232,7 +232,7 @@ const Contact = () => {
                     initial={{ opacity: 0, scale: 0 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
                     transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                    className={`w-12 h-12 bg-slate-800/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 border border-purple-500/20 hover:border-purple-500/40`}
+                    className={`w-12 h-12 bg-slate-800/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 border border-blue-500/20 hover:border-blue-500/40`}
                   >
                     <social.icon className="w-6 h-6" />
                   </motion.a>
@@ -245,11 +245,11 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="h-64 bg-slate-800/30 rounded-lg backdrop-blur-sm border border-purple-500/20 flex items-center justify-center"
+              className="h-64 bg-slate-800/30 rounded-lg backdrop-blur-sm border border-blue-500/20 flex items-center justify-center"
             >
               <div className="text-center">
-                <MapPin className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <p className="text-gray-400">Interactive Map</p>
+                <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <p className="text-gray-400">インタラクティブマップ</p>
                 <p className="text-sm text-gray-500 mt-2">東京都渋谷区周辺</p>
               </div>
             </motion.div>
@@ -262,7 +262,7 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
-        className="mt-20 pt-8 border-t border-purple-500/20"
+        className="mt-20 pt-8 border-t border-blue-500/20"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">

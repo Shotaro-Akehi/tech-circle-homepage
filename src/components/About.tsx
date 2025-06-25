@@ -12,23 +12,23 @@ const About = () => {
   const features = [
     {
       icon: Target,
-      title: "Mission",
-      description: "最新技術の習得と実践を通じて、次世代のエンジニアを育成し、技術で社会に貢献することを目指しています。"
+      title: "ミッション",
+      description: "最新技術の習得と実践を通じて、学生同士で切磋琢磨し、技術で社会に貢献できる人材を目指しています。"
     },
     {
       icon: Users,
-      title: "Community",
-      description: "多様なバックグラウンドを持つメンバーが集まり、お互いの知識とスキルを共有し合うコミュニティです。"
+      title: "コミュニティ",
+      description: "様々な学部・学年のメンバーが集まり、お互いの知識とスキルを共有し合う学習コミュニティです。"
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description: "創造的な思考と最新技術を組み合わせ、革新的なソリューションを生み出すことに挑戦しています。"
+      title: "革新",
+      description: "創造的な思考と最新技術を組み合わせ、学生ならではの自由な発想でプロジェクトに取り組んでいます。"
     },
     {
       icon: Rocket,
-      title: "Growth",
-      description: "個人の成長とチーム全体のスキル向上を重視し、継続的な学習環境を提供しています。"
+      title: "成長",
+      description: "個人の成長とサークル全体のスキル向上を重視し、先輩後輩が共に学べる環境を提供しています。"
     }
   ];
 
@@ -42,13 +42,13 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              About Us
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              私たちについて
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             私たちTech Circleは、技術への情熱を共有し、
-            共に学び成長するコミュニティです。
+            共に学び成長する学生サークルです。
           </p>
         </motion.div>
 
@@ -72,13 +72,13 @@ const About = () => {
               合わせたプロジェクトを展開しています。
             </p>
             <div className="flex flex-wrap gap-4">
-              {['React', 'Next.js', 'TypeScript', 'Python', 'AI/ML', 'Blockchain'].map((tech, index) => (
+              {['React', 'Next.js', 'TypeScript', 'Python', 'AI/ML', 'ブロックチェーン'].map((tech, index) => (
                 <motion.span
                   key={tech}
                   initial={{ opacity: 0, scale: 0 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 font-medium"
+                  className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-300 font-medium"
                 >
                   {tech}
                 </motion.span>
@@ -92,23 +92,23 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl p-8 backdrop-blur-sm border border-purple-500/20">
+            <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 rounded-2xl p-8 backdrop-blur-sm border border-blue-500/20">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                  <div className="text-gray-300">Active Members</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
+                  <div className="text-gray-300">アクティブメンバー</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">20+</div>
-                  <div className="text-gray-300">Projects</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">20+</div>
+                  <div className="text-gray-300">プロジェクト</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">5+</div>
-                  <div className="text-gray-300">Years Active</div>
+                  <div className="text-3xl font-bold text-indigo-400 mb-2">5+</div>
+                  <div className="text-gray-300">年間の活動</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
-                  <div className="text-gray-300">Passion</div>
+                  <div className="text-gray-300">情熱</div>
                 </div>
               </div>
             </div>
@@ -123,9 +123,9 @@ const About = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
-              className="text-center p-6 bg-slate-800/30 rounded-xl backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group"
+              className="text-center p-6 bg-slate-800/30 rounded-xl backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
               <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>

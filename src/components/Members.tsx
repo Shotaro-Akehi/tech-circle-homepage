@@ -89,8 +89,8 @@ const Members = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Our Team
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              私たちのチーム
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -105,35 +105,34 @@ const Members = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-        >
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Code className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-2xl font-bold text-purple-400 mb-1">15+</div>
-            <div className="text-gray-400 text-sm">Developers</div>
+        >        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Code className="w-8 h-8 text-white" />
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Palette className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-2xl font-bold text-blue-400 mb-1">8+</div>
-            <div className="text-gray-400 text-sm">Designers</div>
+          <div className="text-2xl font-bold text-blue-400 mb-1">15+</div>
+          <div className="text-gray-400 text-sm">開発者</div>
+        </div>
+        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Palette className="w-8 h-8 text-white" />
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Database className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-2xl font-bold text-pink-400 mb-1">12+</div>
-            <div className="text-gray-400 text-sm">Data Scientists</div>
+          <div className="text-2xl font-bold text-indigo-400 mb-1">8+</div>
+          <div className="text-gray-400 text-sm">デザイナー</div>
+        </div>
+        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Database className="w-8 h-8 text-white" />
           </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Award className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-2xl font-bold text-green-400 mb-1">25+</div>
-            <div className="text-gray-400 text-sm">Total Members</div>
+          <div className="text-2xl font-bold text-cyan-400 mb-1">12+</div>
+          <div className="text-gray-400 text-sm">データサイエンティスト</div>
+        </div>
+        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Award className="w-8 h-8 text-white" />
           </div>
+          <div className="text-2xl font-bold text-green-400 mb-1">25+</div>
+          <div className="text-gray-400 text-sm">総メンバー数</div>
+        </div>
         </motion.div>
 
         {/* Featured Members */}
@@ -146,15 +145,15 @@ const Members = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
-                className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group"
+                className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group"
               >
                 {/* Avatar */}
                 <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl group-hover:scale-110 transition-transform duration-300">
                     {member.avatar}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
-                  <div className="flex items-center justify-center gap-2 text-purple-400 mb-2">
+                  <div className="flex items-center justify-center gap-2 text-blue-400 mb-2">
                     <RoleIcon className="w-4 h-4" />
                     <span className="text-sm">{member.role}</span>
                   </div>
@@ -170,7 +169,7 @@ const Members = () => {
                   {member.specialties.map((specialty) => (
                     <span
                       key={specialty}
-                      className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-md border border-purple-500/30"
+                      className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-md border border-blue-500/30"
                     >
                       {specialty}
                     </span>
@@ -183,7 +182,7 @@ const Members = () => {
                     href={member.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                   >
                     <Github className="w-5 h-5" />
                   </a>
@@ -191,7 +190,7 @@ const Members = () => {
                     href={member.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                   >
                     <Twitter className="w-5 h-5" />
                   </a>
@@ -199,7 +198,7 @@ const Members = () => {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
@@ -216,7 +215,7 @@ const Members = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-8 backdrop-blur-sm border border-purple-500/20">
+          <div className="bg-gradient-to-r from-blue-900/30 to-cyan-900/30 rounded-2xl p-8 backdrop-blur-sm border border-blue-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               私たちと一緒に働きませんか？
             </h3>
@@ -225,11 +224,11 @@ const Members = () => {
               あなたのスキルと情熱を私たちのプロジェクトに活かしてください。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
-                Join Our Team
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25">
+                チームに参加する
               </button>
-              <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-full font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-105">
-                View Open Positions
+              <button className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105">
+                募集要項を見る
               </button>
             </div>
           </div>

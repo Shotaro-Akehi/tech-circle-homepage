@@ -8,11 +8,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#members', label: 'Members' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#home', label: 'ホーム' },
+    { href: '#about', label: 'について' },
+    { href: '#projects', label: 'プロジェクト' },
+    { href: '#members', label: 'メンバー' },
+    { href: '#contact', label: 'お問い合わせ' },
   ];
 
   return (
@@ -20,7 +20,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
-      className="fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-purple-500/20"
+      className="fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-blue-500/20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -30,7 +30,7 @@ const Navbar = () => {
             transition={{ delay: 0.2 }}
             className="flex items-center"
           >
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               TechCircle
             </span>
           </motion.div>
@@ -45,7 +45,7 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
-                  className="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                 >
                   {item.label}
                 </motion.a>
@@ -62,7 +62,7 @@ const Navbar = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-gray-300 hover:text-purple-400 transition-colors duration-200"
+              className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
             >
               <Github size={20} />
             </motion.a>
@@ -73,7 +73,7 @@ const Navbar = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-gray-300 hover:text-purple-400 transition-colors duration-200"
+              className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
             >
               <Twitter size={20} />
             </motion.a>
@@ -104,7 +104,7 @@ const Navbar = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-300 hover:text-purple-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                className="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -115,7 +115,7 @@ const Navbar = () => {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
               >
                 <Github size={20} />
               </a>
@@ -123,7 +123,7 @@ const Navbar = () => {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
               >
                 <Twitter size={20} />
               </a>

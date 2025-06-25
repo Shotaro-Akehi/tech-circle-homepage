@@ -12,6 +12,7 @@ const Navbar = () => {
     { href: '#about', label: 'について' },
     { href: '#projects', label: 'プロジェクト' },
     { href: '#members', label: 'メンバー' },
+    { href: '#blog', label: 'ブログ' },
     { href: '#contact', label: 'お問い合わせ' },
   ];
 

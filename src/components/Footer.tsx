@@ -68,12 +68,13 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-amber-400 bg-clip-text text-transparent mb-4">
                 Tech Circle
               </h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed">
                 技術で繋がり、共に成長する学生サークル。
-                最新技術を学び、実践し、未来を創造します。
+                <br />
+                <span className="text-amber-300 font-medium">最新技術を学び、実践し、未来を創造</span>します。
               </p>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
@@ -88,7 +89,7 @@ const Footer = () => {
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-blue-500/10 transition-all duration-300 border border-slate-700/50 hover:border-blue-500/30"
+                    className="w-10 h-10 bg-slate-800/60 rounded-lg flex items-center justify-center text-gray-300 hover:text-amber-300 hover:bg-amber-500/20 transition-all duration-300 border border-slate-700/50 hover:border-amber-500/40 shadow-lg"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5" />
@@ -119,7 +120,7 @@ const Footer = () => {
                   >
                     <a
                       href={link.href}
-                      className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm flex items-center gap-1 group"
+                      className="text-gray-300 hover:text-amber-300 transition-colors duration-200 text-sm flex items-center gap-1 group"
                     >
                       {link.name}
                       <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
@@ -158,7 +159,7 @@ const Footer = () => {
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"></div>
     </footer>
   );
 };

@@ -13,22 +13,22 @@ const About = () => {
     {
       icon: Target,
       title: "ミッション",
-      description: "最新技術の習得と実践を通じて、学生同士で切磋琢磨し、技術で社会に貢献できる人材を目指しています。"
+      description: "2025年4月に発足した私たちは、エンジニア同士の情報交換と学習を通じて、技術で社会に貢献できる人材を育成します。"
     },
     {
       icon: Users,
       title: "コミュニティ",
-      description: "様々な学部・学年のメンバーが集まり、お互いの知識とスキルを共有し合う学習コミュニティです。"
+      description: "初心者から経験者まで、様々なバックグラウンドを持つエンジニアが気軽に集まり、知識とスキルを共有し合える場を提供します。"
     },
     {
       icon: Lightbulb,
-      title: "革新",
-      description: "創造的な思考と最新技術を組み合わせ、学生ならではの自由な発想でプロジェクトに取り組んでいます。"
+      title: "学習",
+      description: "新しい技術のインプットから実践的なプロジェクトまで、メンバーが継続的に成長できる学習環境を整えています。"
     },
     {
       icon: Rocket,
       title: "成長",
-      description: "個人の成長とサークル全体のスキル向上を重視し、先輩後輩が共に学べる環境を提供しています。"
+      description: "個人のスキルアップとコミュニティ全体の発展を両立し、メンバー全員が成長し続けられる環境を提供しています。"
     }
   ];
 
@@ -42,13 +42,16 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               私たちについて
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            私たちTech Circleは、技術への情熱を共有し、
-            共に学び成長する学生サークルです。
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto font-medium mb-4">
+            Tech サークルは、2025年4月に新しく発足した技術系コミュニティです。
+          </p>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            エンジニア同士が気軽に集まり、情報交換や新しい知識のインプットができる場を目指しています。
+            発足から2ヶ月が経過し、初心者から経験者まで、多様なメンバーが集まって学び合い、成長し合える温かいコミュニティとして歩み始めています。
           </p>
         </motion.div>
 
@@ -61,26 +64,33 @@ const About = () => {
             <h3 className="text-3xl font-bold text-white mb-6">
               技術で未来を創造する
             </h3>
-            <p className="text-gray-300 text-lg mb-6">
+            <p className="text-gray-200 text-lg mb-6 leading-relaxed">
               私たちは単なる学習グループではありません。実際のプロジェクトを通じて、
               メンバー一人一人が技術スキルを向上させ、同時に実社会に貢献できる
               ソリューションを開発しています。
             </p>
-            <p className="text-gray-300 text-lg mb-8">
+            <p className="text-gray-200 text-lg mb-8 leading-relaxed">
               Web開発、AI・機械学習、モバイルアプリ開発、IoTなど、
               幅広い技術分野をカバーし、メンバーの興味と市場のニーズに
               合わせたプロジェクトを展開しています。
             </p>
             <div className="flex flex-wrap gap-4">
-              {['React', 'Next.js', 'TypeScript', 'Python', 'AI/ML', 'ブロックチェーン'].map((tech, index) => (
+              {[
+                { name: 'React', color: 'from-blue-500/30 to-blue-600/30 border-blue-400/40 text-blue-300' },
+                { name: 'Next.js', color: 'from-slate-500/30 to-slate-600/30 border-slate-400/40 text-slate-300' },
+                { name: 'TypeScript', color: 'from-blue-500/30 to-indigo-600/30 border-blue-400/40 text-blue-300' },
+                { name: 'Python', color: 'from-yellow-500/30 to-amber-600/30 border-amber-400/40 text-amber-300' },
+                { name: 'AI/ML', color: 'from-purple-500/30 to-purple-600/30 border-purple-400/40 text-purple-300' },
+                { name: 'ブロックチェーン', color: 'from-emerald-500/30 to-emerald-600/30 border-emerald-400/40 text-emerald-300' }
+              ].map((tech, index) => (
                 <motion.span
-                  key={tech}
+                  key={tech.name}
                   initial={{ opacity: 0, scale: 0 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-300 font-medium"
+                  className={`px-4 py-2 bg-gradient-to-r ${tech.color} border rounded-full font-medium hover:scale-105 transition-transform duration-200`}
                 >
-                  {tech}
+                  {tech.name}
                 </motion.span>
               ))}
             </div>
@@ -92,23 +102,23 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 rounded-2xl p-8 backdrop-blur-sm border border-blue-500/20">
+            <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 rounded-2xl p-8 backdrop-blur-sm border border-slate-600/30 shadow-xl">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
-                  <div className="text-gray-300">アクティブメンバー</div>
+                  <div className="text-3xl font-bold text-amber-400 mb-2">50+</div>
+                  <div className="text-gray-200">アクティブメンバー</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">20+</div>
-                  <div className="text-gray-300">プロジェクト</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">20+</div>
+                  <div className="text-gray-200">プロジェクト</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-indigo-400 mb-2">5+</div>
-                  <div className="text-gray-300">年間の活動</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">5+</div>
+                  <div className="text-gray-200">年間の活動</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
-                  <div className="text-gray-300">情熱</div>
+                  <div className="text-3xl font-bold text-emerald-400 mb-2">100%</div>
+                  <div className="text-gray-200">情熱</div>
                 </div>
               </div>
             </div>
@@ -117,21 +127,35 @@ const About = () => {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
-              className="text-center p-6 bg-slate-800/30 rounded-xl backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
-            </motion.div>
-          ))}
+          {features.map((feature, index) => {
+            const colors = [
+              'from-blue-500 to-blue-600',
+              'from-purple-500 to-purple-600', 
+              'from-amber-500 to-amber-600',
+              'from-emerald-500 to-emerald-600'
+            ];
+            const borderColors = [
+              'border-slate-600/30 hover:border-blue-500/40',
+              'border-slate-600/30 hover:border-purple-500/40',
+              'border-slate-600/30 hover:border-amber-500/40',
+              'border-slate-600/30 hover:border-emerald-500/40'
+            ];
+            return (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 50 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                className={`text-center p-6 bg-slate-800/40 rounded-xl backdrop-blur-sm border ${borderColors[index]} transition-all duration-300 group hover:shadow-lg`}
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${colors[index]} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <feature.icon className="w-8 h-8 text-white drop-shadow-sm" />
+                </div>
+                <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>
+                <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -124,18 +124,18 @@ const Blog = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mb-6">
-            <BookOpen className="w-8 h-8 text-white" />
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-500 via-purple-500 to-blue-500 rounded-full mb-6 shadow-lg">
+            <BookOpen className="w-8 h-8 text-white drop-shadow-lg" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Tech Blog
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
             メンバーが技術学習や開発体験、サークル活動について
             <br />
-            リアルな体験談と知見を共有しています
+            <span className="text-amber-300 font-semibold">リアルな体験談と知見</span>を共有しています
           </p>
         </motion.div>
 
@@ -153,7 +153,7 @@ const Blog = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 border ${
                 selectedCategory === category.id
                   ? getCategoryColor(category.id)
-                  : 'bg-slate-800/50 text-gray-400 border-slate-600/50 hover:border-blue-500/30 hover:text-blue-400'
+                  : 'bg-slate-800/50 text-gray-400 border-slate-600/50 hover:border-amber-500/40 hover:text-amber-300'
               }`}
             >
               {category.name}

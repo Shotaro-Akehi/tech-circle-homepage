@@ -1,0 +1,36 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="favicon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff00ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffff00;stop-opacity:1" />
+    </linearGradient>
+    <filter id="favicon-glow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="32" height="32" fill="#1a1a2e" rx="6"/>
+  
+  <!-- T letter -->
+  <text x="16" y="22" 
+        font-family="Arial, sans-serif" 
+        font-size="20" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="url(#favicon-gradient)" 
+        filter="url(#favicon-glow)">
+    T
+  </text>
+  
+  <!-- Small glow dots -->
+  <circle cx="6" cy="6" r="1" fill="#00ffff" opacity="0.8"/>
+  <circle cx="26" cy="6" r="1" fill="#ff00ff" opacity="0.8"/>
+  <circle cx="6" cy="26" r="1" fill="#ffff00" opacity="0.8"/>
+  <circle cx="26" cy="26" r="1" fill="#ff69b4" opacity="0.8"/>
+</svg>
